@@ -12,7 +12,7 @@ $ npm install stylelint-config-cssrecipes
 
 As a JavaScript library
 
-```
+```js
 var fs = require("fs")
 var postcss = require("postcss")
 var cssnext = require("cssnext")
@@ -29,8 +29,6 @@ var output = postcss()
   .process(input)
 
   fs.writeFileSync("dist/index.css", output)
-
-
 ```
 
 

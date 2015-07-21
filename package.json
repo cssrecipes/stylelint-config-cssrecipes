@@ -1,0 +1,42 @@
+{
+  "name": "stylelint-config-cssrecipes",
+  "version": "1.0.0",
+  "description": "cssrecipes shareable config for stylelint",
+  "keywords": [
+    "browser",
+    "style",
+    "css",
+    "css-components",
+    "css-recipes",
+    "cssrecipes",
+    "recipes",
+    "linter",
+    "stylelint-config",
+    "stylelint"
+  ],
+  "author": "magsout",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stylelint/stylelint-config-cssrecipes.git"
+  },
+  "homepage": "https://github.com/stylelint/stylelint-config-cssrecipes",
+  "bugs": {
+    "url": "https://github.com/stylelint/stylelint-config-cssrecipes/issues"
+  },
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "index.js"
+  ],
+  "devDependencies": {
+    "eslint": "^1.0.0-rc-1",
+    "postcss": "^4.1.16",
+    "stylelint": "^0.2.0",
+    "tape": "^4.0.1"
+  },
+  "scripts": {
+    "lint": "eslint . --ignore-path .gitignore",
+    "test": "npm run lint"
+  }
+}

@@ -1,5 +1,7 @@
 # stylelint-config-cssrecipes
 
+[![Travis Build Status](https://travis-ci.org/stylelint/stylelint-config-cssrecipes.svg?branch=master)](https://travis-ci.org/stylelint/stylelint-config-cssrecipes)
+
 > cssrecipes shareable config for stylelint
 
 ## Install

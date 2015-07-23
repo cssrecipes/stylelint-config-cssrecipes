@@ -1,5 +1,5 @@
 # stylelint-config-cssrecipes
-
+[![npm](https://img.shields.io/npm/v/stylelint-config-cssrecipes.svg?style=flat)](https://www.npmjs.com/package/stylelint-config-cssrecipes)
 [![Travis Build Status](https://travis-ci.org/stylelint/stylelint-config-cssrecipes.svg?branch=master)](https://travis-ci.org/stylelint/stylelint-config-cssrecipes)
 
 > cssrecipes shareable config for stylelint

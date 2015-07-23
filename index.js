@@ -28,6 +28,9 @@ module.exports = {
     "function-parentheses-space-inside": [2, "never"],
     "function-space-after": [2, "always"],
     "function-url-quotes": [2, "double"],
+    "indentation": [2, 2, {
+      hierarchicalSelectors: true,
+    }],
     "media-feature-colon-space-after": [2, "always"],
     "media-feature-colon-space-before": [2, "never"],
     "media-feature-name-no-vendor-prefix": 2,

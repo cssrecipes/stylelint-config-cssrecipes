@@ -32,7 +32,7 @@
   "devDependencies": {
     "eslint": "^1.0.0-rc-1",
     "postcss": "^4.1.16",
-    "stylelint": "^0.2.0",
+    "stylelint": "^0.3.2",
     "tape": "^4.0.1"
   },
   "scripts": {

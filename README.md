@@ -4,7 +4,7 @@
 
 > cssrecipes shareable config for stylelint
 
-## Install
+## Installation
 
 ```console
 $ npm install stylelint-config-cssrecipes
@@ -12,27 +12,30 @@ $ npm install stylelint-config-cssrecipes
 
 ## Usage
 
-As a JavaScript library
+Set your stylelint config to:
 
-```js
-var fs = require("fs")
-var postcss = require("postcss")
-var cssnext = require("cssnext")
-var cssrecipesConfig = require("stylelint-config-cssrecipes")
-var reporter = require("postcss-reporter")
-var stylelint = require("stylelint")
-
-var input = fs.readFileSync("index.css", "utf8")
-
-var output = postcss()
-  .use(stylelint(cssrecipesConfig))
-  .use(reporter())
-  .use(cssnext())
-  .process(input)
-
-  fs.writeFileSync("dist/index.css", output)
+```json
+{
+  "extends": "stylelint-config-cssrecipes"
+}
 ```
 
+### Extending the config
+
+Simply add a `"rules"` key to your config and add your overrides there.
+
+For example, to change the `indentation` to tabs and turn off the `number-leading-zero` rule:
+
+
+```json
+{
+  "extends": "stylelint-config-cssrecipes",
+  "rules": {
+    "indentation": "tab",
+    "number-leading-zero": null
+  }
+}
+```
 
 ## Contributing
 

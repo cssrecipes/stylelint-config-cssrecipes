@@ -1,4 +1,4 @@
-# Head
+# 2.0.1
 
 - Fixed: syntax of `indentation` rule config.
 

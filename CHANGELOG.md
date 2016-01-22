@@ -1,3 +1,7 @@
+# Head
+
+- Fixed: syntax of `indentation` rule config.
+
 # 2.0.0
 
 - Removed: `stylelint < 3.0.0` compatibility.

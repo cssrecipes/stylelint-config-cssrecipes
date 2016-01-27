@@ -41,8 +41,9 @@
   },
   "scripts": {
     "lint": "eslint . --ignore-path .gitignore",
+    "pretest": "npm run lint",
     "tape": "babel-tape-runner \"__tests__/**/*.js\"",
-    "test": "npm run lint && npm run tape"
+    "test": "npm run tape"
   },
   "babel": {
     "presets": [

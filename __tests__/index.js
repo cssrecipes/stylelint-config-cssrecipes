@@ -1,39 +1,44 @@
 import config from "../"
 import stylelint from "stylelint"
-import test from "tape"
+import test from "ava"
 
-test("basic properties of config", t => {
-  t.ok(isObject(config.rules), "rules is object")
-  t.end()
-})
-
-function isObject(obj) {
-  return typeof obj === "object" && obj !== null
+const validCss = (
+`
+a {
+  top: .2em;
 }
+`)
 
-const css = (
+const invalidCss = (
 `a {
   top: 0.2em;
 }
 
 `)
 
-stylelint.lint({
-  code: css,
-  config: config,
-})
-.then(checkResult)
-.catch(function (err) {
-  console.error(err.stack)
+test("no warnings with valid css", t => {
+  return stylelint.lint({
+    code: validCss,
+    config: config,
+  })
+  .then(data => {
+    const { errored, results } = data
+    const { warnings } = results[0]
+    t.notOk(errored, "no errored")
+    t.is(warnings.length, 0, "flags no warnings")
+  })
 })
 
-function checkResult(data) {
-  const { errored, results } = data
-  const { warnings } = results[0]
-  test("expected warnings", t => {
-    t.ok(errored, "errored")
-    t.equal(warnings.length, 1, "flags one warning")
-    t.equal(warnings[0].text, "Unexpected leading zero (number-leading-zero)", "correct warning text")
-    t.end()
+test("a warning with invalid css", t => {
+  return stylelint.lint({
+    code: invalidCss,
+    config: config,
   })
-}
+  .then(data => {
+    const { errored, results } = data
+    const { warnings } = results[0]
+    t.ok(errored, "errored")
+    t.is(warnings.length, 1, "flags one warning")
+    t.is(warnings[0].text, "Unexpected leading zero (number-leading-zero)", "correct warning text")
+  })
+})

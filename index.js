@@ -17,6 +17,7 @@ module.exports = {
     "comment-empty-line-before": "always",
     "declaration-bang-space-after": "never",
     "declaration-bang-space-before": "always",
+    "declaration-block-trailing-semicolon": "always",
     "declaration-block-semicolon-newline-after": "always-multi-line",
     "declaration-block-semicolon-space-after": "always-single-line",
     "declaration-block-semicolon-space-before": "never",
@@ -54,7 +55,6 @@ module.exports = {
     "rule-non-nested-empty-line-before": [ "always-multi-line", {
       ignore: ["after-comment"],
     } ],
-    "rule-trailing-semicolon": "always",
     "selector-combinator-space-after": "always",
     "selector-combinator-space-before": "always",
     "selector-list-comma-newline-after": "always",

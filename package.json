@@ -34,7 +34,7 @@
     "eslint": "^2.2.0",
     "eslint-config-stylelint": "^1.0.0",
     "postcss": "^5.0.13",
-    "stylelint": "^4.1.0"
+    "stylelint": "^5.0.1"
   },
   "scripts": {
     "ava": "ava --verbose \"__tests__/**/*.js\"",
